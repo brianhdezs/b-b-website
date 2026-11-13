@@ -106,9 +106,9 @@ export default function EstudioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
             <div className="border-l border-stone-800 pl-6 space-y-2">
               <span className="text-xs font-mono text-stone-400 uppercase tracking-widest block">
-                Socio Fundador
+                Fundador
               </span>
-              <h4 className="text-xl font-light text-white">Arq. Bernardo Morales</h4>
+              <h4 className="text-xl font-light text-white">Arq. Benjamín E. Hernández.</h4>
               <p className="text-stone-400 font-light text-sm leading-relaxed pt-2">
                 Más de 30 años de experiencia liderando proyectos residenciales, desarrollo técnico y dirección de obra. Formado en la tradición constructiva y estructural mexicana.
               </p>
@@ -116,9 +116,9 @@ export default function EstudioPage() {
 
             <div className="border-l border-stone-800 pl-6 space-y-2">
               <span className="text-xs font-mono text-stone-400 uppercase tracking-widest block">
-                Socio / Director de Diseño
+                Director
               </span>
-              <h4 className="text-xl font-light text-white">Arq. Brian Morales</h4>
+              <h4 className="text-xl font-light text-white">Arq. Benjamín A. Hernández.</h4>
               <p className="text-stone-400 font-light text-sm leading-relaxed pt-2">
                 Enfocado en la investigación espacial, diseño conceptual contemporáneo, sustentabilidad pasiva y la integración de nuevas tecnologías en la arquitectura.
               </p>

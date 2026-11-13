@@ -29,12 +29,12 @@ export default function Home() {
 
         {/* Studio Heading */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white uppercase mb-8 leading-[1.05]">
-          BMASB <span className="font-extralight text-stone-400">Arquitectos</span>
+          B+B <span className="font-extralight text-stone-400">Arquitectos</span>
         </h1>
 
         {/* Minimalist Statement */}
         <p className="max-w-xl text-stone-300 font-light text-sm sm:text-base md:text-lg leading-relaxed mb-12 text-center">
-          Diseño arquitectónico contemporáneo con rigor formal, sensibilidad espacial y valor atemporal.
+          Proyectamos tu patrimonio.
         </p>
 
         {/* Two Essential Action Buttons */}

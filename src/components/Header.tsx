@@ -29,11 +29,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-        scrolled || !isHome
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrolled || !isHome
           ? 'bg-stone-950/90 text-stone-100 backdrop-blur-md border-b border-stone-800/80 py-4'
           : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent text-white py-6'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Brand / Logo */}
@@ -41,7 +40,7 @@ export default function Header() {
           href="/"
           className="group flex flex-col tracking-widest uppercase font-light text-sm sm:text-base transition-opacity hover:opacity-80"
         >
-          <span className="font-medium tracking-[0.25em]">BMASB</span>
+          <span className="font-medium tracking-[0.25em]">B+B</span>
           <span className="text-[10px] tracking-[0.35em] text-stone-400 group-hover:text-stone-300 transition-colors">
             Arquitectos
           </span>
@@ -55,11 +54,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-xs uppercase tracking-[0.2em] transition-all relative py-1 ${
-                  isActive
+                className={`text-xs uppercase tracking-[0.2em] transition-all relative py-1 ${isActive
                     ? 'text-white font-medium after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-white'
                     : 'text-stone-300 hover:text-white'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -88,9 +86,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg uppercase tracking-[0.25em] transition-colors py-2 border-b border-stone-900 ${
-                    isActive ? 'text-white font-medium pl-2 border-l-2 border-white' : 'text-stone-400 hover:text-white'
-                  }`}
+                  className={`text-lg uppercase tracking-[0.25em] transition-colors py-2 border-b border-stone-900 ${isActive ? 'text-white font-medium pl-2 border-l-2 border-white' : 'text-stone-400 hover:text-white'
+                    }`}
                 >
                   {link.label}
                 </Link>

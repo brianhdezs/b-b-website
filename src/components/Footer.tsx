@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Col 1: Studio info */}
           <div className="md:col-span-2 space-y-4">
             <span className="text-white text-sm font-medium tracking-[0.25em] uppercase block">
-              BMASB Arquitectos
+              B+B Arquitectos
             </span>
             <p className="text-stone-400 text-xs sm:text-sm font-light max-w-sm leading-relaxed">
               Despacho de arquitectura dedicado al diseño contemporáneo, el rigor constructivo y la creación de espacios atemporales con arraigo contextual y material.
@@ -52,8 +52,8 @@ export default function Footer() {
               Contacto
             </p>
             <div className="text-xs space-y-2 font-light">
-              <p className="text-stone-300">contacto@bmasbarquitectos.com</p>
-              <p className="text-stone-400">+52 (55) 1234 5678</p>
+              <p className="text-stone-300">bmasbarquitectos@hotmail.com</p>
+              <p className="text-stone-400">+52 773 127 3164</p>
               <div className="flex space-x-4 pt-2 text-stone-400">
                 <a
                   href="https://instagram.com"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </a>
                 <span className="text-stone-700">&bull;</span>
                 <a
-                  href="https://wa.me/5215512345678"
+                  href="https://wa.me/527731273164"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors uppercase text-[10px] tracking-widest font-mono"
@@ -79,8 +79,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-stone-900/80 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono tracking-wider text-stone-400 gap-4">
-          <p>&copy; {currentYear} BMASB Arquitectos. Todos los derechos reservados.</p>
-          <p className="text-stone-400">Diseño y Arquitectura</p>
+          <p>&copy; {currentYear} B+B Arquitectos. Todos los derechos reservados.</p>
+          <p className="text-stone-400">Proyectamos tu patrimonio</p>
         </div>
       </div>
     </footer>
