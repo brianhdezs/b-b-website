@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="antialiased font-sans">
-      <body className="bg-stone-950 text-stone-100 flex flex-col min-h-screen selection:bg-stone-100 selection:text-stone-950 font-sans">
+      <body className="bg-arch-950 text-arch-100 flex flex-col min-h-screen selection:bg-white selection:text-arch-950 font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

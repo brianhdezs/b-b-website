@@ -9,28 +9,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#ffffff",
-        foreground: "#111111",
-        stone: {
-          50: "#fafaf9",
-          100: "#f5f5f4",
-          200: "#e7e5e4",
-          300: "#d6d3d1",
-          400: "#a8a29e",
-          500: "#78716c",
-          600: "#57534e",
-          700: "#44403c",
-          800: "#292524",
-          900: "#1c1917",
-          950: "#0c0a09",
+        background: "#111111",
+        foreground: "#f5f5f5",
+        // Paleta oficial BMASB inspirada en la escala de referencia:
+        // Night (#111111), Eerie Black (#232323), Jet (#343434), Outer Space (#464646), Davy's Gray (#575757)
+        arch: {
+          50: "#fafafa",
+          100: "#f5f5f5", // Texto principal y destaques blancos
+          200: "#d4d4d4", // Texto secundario claro
+          300: "#8a8a8a", // Texto auxiliar / leyendas
+          400: "#575757", // [Davy's gray] Acentos de borde activos y metadatos
+          500: "#464646", // [Outer space] Líneas estructurales y bordes principales
+          600: "#343434", // [Jet] Superficies elevadas, botones secundarios y separadores
+          700: "#2c2c2c", // Contenedores interactivos
+          800: "#232323", // [Eerie black] Tarjetas de proyecto y paneles
+          850: "#1c1c1c", // Superficie de tarjetas y modales
+          900: "#161616", // Fondo secundario
+          950: "#111111", // [Night] Fondo base del sitio
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "Cambria", "serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+        ],
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "monospace",
+        ],
       },
       letterSpacing: {
-        widest: "0.2em",
+        widest: "0.25em",
         tightest: "-0.04em",
       },
     },
@@ -39,4 +57,3 @@ const config: Config = {
 };
 
 export default config;
-
