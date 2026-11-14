@@ -65,30 +65,30 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 backdrop-blur-md transition-all duration-300 p-3 sm:p-5 md:p-8"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-arch-950/65 backdrop-blur-md transition-all duration-300 p-3 sm:p-5 md:p-8"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-project-title"
     >
-      {/* Floating Glassmorphism Modal Card */}
+      {/* Floating Glassmorphism Modal Card with Defined Gray Structure */}
       <div
-        className="relative flex flex-col lg:flex-row w-full max-w-7xl h-[90vh] bg-stone-950/75 backdrop-blur-2xl text-stone-100 border border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] rounded-2xl overflow-hidden"
+        className="relative flex flex-col lg:flex-row w-full max-w-7xl h-[90vh] bg-arch-850/95 backdrop-blur-2xl text-arch-100 border border-arch-500/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Floating Glass Close Button - isolated with safe spacing from content */}
+        {/* Floating Close Button in Jet/Outer Gray Glass */}
         <button
           onClick={onClose}
           aria-label="Cerrar modal"
-          className="absolute top-4 right-4 sm:top-5 sm:right-5 z-40 flex items-center justify-center w-10 h-10 rounded-full text-stone-300 hover:text-white bg-stone-900/80 hover:bg-stone-800/90 border border-white/15 backdrop-blur-md shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 z-40 flex items-center justify-center w-10 h-10 rounded-full text-arch-200 hover:text-white bg-arch-700/90 hover:bg-arch-600 border border-arch-500 hover:border-arch-400 backdrop-blur-md shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
         >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Left Column: Visual Gallery Viewer with Frosted Backdrop */}
-        <div className="relative flex-1 flex flex-col justify-between bg-black/35 backdrop-blur-sm h-1/2 lg:h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10">
+        {/* Left Column: Visual Gallery Viewer */}
+        <div className="relative flex-1 flex flex-col justify-between bg-arch-900/90 backdrop-blur-sm h-1/2 lg:h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-arch-600/80">
           {/* Top Bar: Category Filter Pills & Counter Badge */}
-          <div className="px-4 sm:px-6 py-2.5 bg-stone-950/60 backdrop-blur-md border-b border-white/10 flex items-center justify-between gap-3 z-10 pr-16 lg:pr-6 flex-shrink-0">
+          <div className="px-4 sm:px-6 py-2.5 bg-arch-800 border-b border-arch-600 flex items-center justify-between gap-3 z-10 pr-16 lg:pr-6 flex-shrink-0">
             {/* Category Filter Pills */}
             <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-0.5">
               {['todos', 'exterior', 'interior', 'detalle', 'plano'].map((cat) => {
@@ -103,8 +103,8 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     }}
                     className={`px-3 py-1 text-[11px] tracking-wider uppercase rounded-full transition-all whitespace-nowrap ${
                       activeFilter === cat
-                        ? 'bg-stone-100 text-stone-950 font-medium shadow-sm'
-                        : 'text-stone-400 hover:text-stone-200 hover:bg-white/5'
+                        ? 'bg-white text-arch-950 font-medium shadow-sm'
+                        : 'text-arch-200 bg-arch-700 hover:bg-arch-600 border border-arch-500/80 hover:text-white'
                     }`}
                   >
                     {cat} ({count})
@@ -113,18 +113,18 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               })}
             </div>
 
-            {/* Media Type Badge & Counter in Glass Capsule */}
-            <div className="flex items-center gap-2 text-xs tracking-wider uppercase text-stone-400 bg-stone-900/70 px-3 py-1 border border-white/15 rounded-full backdrop-blur-md shadow-sm flex-shrink-0">
-              <span className="font-mono text-white">
+            {/* Media Type Badge & Counter in Gray Capsule */}
+            <div className="flex items-center gap-2 text-xs tracking-wider uppercase text-arch-200 bg-arch-700 px-3 py-1 border border-arch-500 rounded-full backdrop-blur-md shadow-sm flex-shrink-0">
+              <span className="font-mono text-white font-medium">
                 {String(currentMediaIndex + 1).padStart(2, '0')} / {String(filteredGallery.length).padStart(2, '0')}
               </span>
-              <span className="text-stone-600">|</span>
+              <span className="text-arch-400">|</span>
               <span className="capitalize">{currentMedia?.type}</span>
             </div>
           </div>
 
           {/* Main Visual Display */}
-          <div className="relative flex-1 flex items-center justify-center p-4 lg:p-8 min-h-0 overflow-hidden">
+          <div className="relative flex-1 flex items-center justify-center p-4 lg:p-8 min-h-0 overflow-hidden bg-arch-950/40">
             {currentMedia ? (
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image
@@ -138,20 +138,20 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               </div>
             ) : null}
 
-            {/* Previous & Next Glass Circular Arrows */}
+            {/* Previous & Next Circular Arrows */}
             {filteredGallery.length > 1 && (
               <>
                 <button
                   onClick={handlePrev}
                   aria-label="Imagen anterior"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-stone-950/60 hover:bg-stone-900/90 text-stone-300 hover:text-white border border-white/15 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-arch-800/80 hover:bg-arch-600 text-arch-200 hover:text-white border border-arch-500 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={handleNext}
                   aria-label="Siguiente imagen"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-stone-950/60 hover:bg-stone-900/90 text-stone-300 hover:text-white border border-white/15 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-arch-800/80 hover:bg-arch-600 text-arch-200 hover:text-white border border-arch-500 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -159,23 +159,23 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             )}
           </div>
 
-          {/* Dedicated Dynamic Caption Area (Full width, wraps gracefully, never truncates or collides) */}
-          <div className="px-6 py-2.5 bg-stone-950/60 backdrop-blur-md border-t border-white/10 min-h-[44px] flex items-center flex-shrink-0">
-            <p className="text-stone-300 font-light text-xs sm:text-sm italic leading-relaxed w-full">
+          {/* Dedicated Dynamic Caption Area */}
+          <div className="px-6 py-2.5 bg-arch-850 border-t border-arch-600 min-h-[44px] flex items-center flex-shrink-0">
+            <p className="text-arch-200 font-light text-xs sm:text-sm italic leading-relaxed w-full">
               {currentMedia?.caption || project.title}
             </p>
           </div>
 
           {/* Thumbnails Strip */}
-          <div className="flex gap-2 p-3 bg-stone-950/40 backdrop-blur-md overflow-x-auto border-t border-white/10 scrollbar-thin flex-shrink-0">
+          <div className="flex gap-2 p-3 bg-arch-900 overflow-x-auto border-t border-arch-600 scrollbar-thin flex-shrink-0">
             {filteredGallery.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentMediaIndex(idx)}
                 className={`relative flex-shrink-0 w-16 h-12 rounded-md overflow-hidden border transition-all duration-200 ${
                   idx === currentMediaIndex
-                    ? 'border-white opacity-100 scale-105 shadow-sm'
-                    : 'border-white/10 opacity-40 hover:opacity-80'
+                    ? 'border-white opacity-100 scale-105 shadow-md'
+                    : 'border-arch-600 opacity-40 hover:opacity-80'
                 }`}
               >
                 <Image src={item.url} alt={`Miniatura ${idx + 1}`} fill className="object-cover" />
@@ -185,14 +185,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
         </div>
 
         {/* Right Column: Architectural Dossier & Homogeneous Spec Sheet */}
-        <div className="w-full lg:w-[420px] xl:w-[460px] h-1/2 lg:h-full overflow-y-auto p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-stone-950/60 backdrop-blur-xl">
+        <div className="w-full lg:w-[420px] xl:w-[460px] h-1/2 lg:h-full overflow-y-auto p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-arch-800/95 border-l border-arch-600/60">
           <div>
             {/* Header / Typology - With dedicated right padding (pr-14) so it NEVER collides with the close button */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6 pr-14">
-              <span className="text-[11px] tracking-widest uppercase font-mono text-stone-400">
+            <div className="flex items-center justify-between border-b border-arch-600 pb-4 mb-6 pr-14">
+              <span className="text-[11px] tracking-widest uppercase font-mono text-arch-300">
                 Ficha Técnica de Proyecto
               </span>
-              <span className="text-xs px-2.5 py-0.5 border border-white/15 bg-white/5 rounded-full text-stone-300 tracking-wider uppercase font-mono">
+              <span className="text-xs px-2.5 py-0.5 border border-arch-500 bg-arch-700 rounded-full text-arch-200 tracking-wider uppercase font-mono">
                 {project.typology}
               </span>
             </div>
@@ -203,67 +203,67 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             </h2>
 
             {/* Homogeneous Spec Sheet Table */}
-            <dl className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm border-y border-white/10 py-6 mb-6">
+            <dl className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm border-y border-arch-600 py-6 mb-6">
               <div>
-                <dt className="text-[11px] uppercase tracking-wider text-stone-400 font-mono mb-1 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-stone-400" />
+                <dt className="text-[11px] uppercase tracking-wider text-arch-400 font-mono mb-1 flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-arch-400" />
                   Tipología
                 </dt>
-                <dd className="text-stone-200 font-light">{project.typology}</dd>
+                <dd className="text-arch-100 font-light">{project.typology}</dd>
               </div>
 
               <div>
-                <dt className="text-[11px] uppercase tracking-wider text-stone-400 font-mono mb-1 flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-stone-400" />
+                <dt className="text-[11px] uppercase tracking-wider text-arch-400 font-mono mb-1 flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-arch-400" />
                   Ubicación
                 </dt>
-                <dd className="text-stone-200 font-light">{project.location}</dd>
+                <dd className="text-arch-100 font-light">{project.location}</dd>
               </div>
 
               <div>
-                <dt className="text-[11px] uppercase tracking-wider text-stone-400 font-mono mb-1 flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                <dt className="text-[11px] uppercase tracking-wider text-arch-400 font-mono mb-1 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-arch-400" />
                   Año de Culminación
                 </dt>
-                <dd className="text-stone-200 font-mono">{project.year}</dd>
+                <dd className="text-arch-100 font-mono">{project.year}</dd>
               </div>
 
               <div>
-                <dt className="text-[11px] uppercase tracking-wider text-stone-400 font-mono mb-1 flex items-center gap-1.5">
-                  <Maximize2 className="w-3.5 h-3.5 text-stone-400" />
+                <dt className="text-[11px] uppercase tracking-wider text-arch-400 font-mono mb-1 flex items-center gap-1.5">
+                  <Maximize2 className="w-3.5 h-3.5 text-arch-400" />
                   Área Construida
                 </dt>
-                <dd className="text-stone-200 font-mono">{project.area}</dd>
+                <dd className="text-arch-100 font-mono">{project.area}</dd>
               </div>
 
               {project.photographer && (
-                <div className="col-span-2 pt-2 border-t border-white/5">
-                  <dt className="text-[11px] uppercase tracking-wider text-stone-400 font-mono mb-1 flex items-center gap-1.5">
-                    <Camera className="w-3.5 h-3.5 text-stone-400" />
+                <div className="col-span-2 pt-2 border-t border-arch-600/60">
+                  <dt className="text-[11px] uppercase tracking-wider text-arch-400 font-mono mb-1 flex items-center gap-1.5">
+                    <Camera className="w-3.5 h-3.5 text-arch-400" />
                     Fotografía
                   </dt>
-                  <dd className="text-stone-300 font-light text-xs">{project.photographer}</dd>
+                  <dd className="text-arch-200 font-light text-xs">{project.photographer}</dd>
                 </div>
               )}
             </dl>
 
             {/* Project Memory / Description */}
             <div className="space-y-3">
-              <h3 className="text-xs uppercase tracking-widest font-mono text-stone-400 flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5 text-stone-400" />
+              <h3 className="text-xs uppercase tracking-widest font-mono text-arch-300 flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-arch-400" />
                 Memoria Descriptiva
               </h3>
-              <p className="text-stone-300 text-sm leading-relaxed font-light text-justify">
+              <p className="text-arch-200 text-sm leading-relaxed font-light text-justify">
                 {project.description}
               </p>
             </div>
           </div>
 
           {/* Modal Footer Call to Action */}
-          <div className="pt-8 border-t border-white/10 mt-8">
+          <div className="pt-8 border-t border-arch-600 mt-8">
             <a
               href="/contacto"
-              className="inline-flex items-center justify-center w-full py-3.5 px-6 text-xs uppercase tracking-widest font-medium text-stone-950 bg-stone-100 hover:bg-white hover:shadow-xl transition-all rounded-lg"
+              className="inline-flex items-center justify-center w-full py-3.5 px-6 text-xs uppercase tracking-widest font-medium text-arch-950 bg-white hover:bg-arch-100 hover:shadow-xl transition-all rounded-lg"
             >
               Cotizar proyecto similar
             </a>
