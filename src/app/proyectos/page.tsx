@@ -33,24 +33,21 @@ export default function ProyectosPage() {
               Portafolio de Obras
             </p>
             <h1 className="text-3xl sm:text-5xl font-light tracking-tight text-white uppercase">
-              Proyectos Seleccionados
+              Proyectos <br /> Seleccionados
             </h1>
           </div>
 
           {/* Typology Filter Bar */}
           <div className="flex items-center flex-wrap gap-2">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-stone-400 mr-2 hidden sm:inline-flex items-center gap-1">
-              <SlidersHorizontal className="w-3 h-3" /> Filtrar:
-            </span>
+
             {typologies.map((item) => (
               <button
                 key={item}
                 onClick={() => setActiveTypology(item)}
-                className={`px-4 py-2 text-xs uppercase tracking-widest transition-all duration-200 ${
-                  activeTypology === item
+                className={`px-4 py-2 text-xs uppercase tracking-widest transition-all duration-200 ${activeTypology === item
                     ? 'bg-stone-100 text-stone-950 font-medium'
                     : 'text-stone-400 hover:text-white bg-stone-900/60 hover:bg-stone-900 border border-stone-800'
-                }`}
+                  }`}
               >
                 {item === 'todos' ? 'Todos' : item}
               </button>
