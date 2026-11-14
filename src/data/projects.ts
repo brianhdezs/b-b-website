@@ -26,7 +26,7 @@ export const projects: Project[] = [
       },
       {
         url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80',
-        caption: 'Estancia principal con losa de concreto aparente y carpintería de roble',
+        caption: 'Estancia principal con losa de concreto aparente y carpinteria',
         type: 'interior',
       },
       {

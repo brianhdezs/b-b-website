@@ -37,7 +37,7 @@ export default function ContactoPage() {
             <div className="space-y-6">
               {/* WhatsApp (Direct Link) */}
               <a
-                href="https://wa.me/5215512345678?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20con%20BMASB%20Arquitectos."
+                href="https://wa.me/527731273164?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20con%20B+B%20Arquitectos."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-start gap-4 p-5 bg-stone-900/40 border border-stone-800 hover:border-stone-500 transition-all"
@@ -52,7 +52,7 @@ export default function ContactoPage() {
                     </span>
                     <ArrowUpRight className="w-4 h-4 text-stone-500 group-hover:text-white transition-colors" />
                   </div>
-                  <p className="text-stone-200 text-sm mt-1 font-mono">+52 (55) 1234 5678</p>
+                  <p className="text-stone-200 text-sm mt-1 font-mono">+52 (773) 127 3164</p>
                   <p className="text-stone-400 text-xs mt-1">Respuesta ágil y citas previas</p>
                 </div>
               </a>
@@ -72,7 +72,7 @@ export default function ContactoPage() {
                     </span>
                     <ArrowUpRight className="w-4 h-4 text-stone-500 group-hover:text-white transition-colors" />
                   </div>
-                  <p className="text-stone-200 text-sm mt-1 font-mono">contacto@bmasbarquitectos.com</p>
+                  <p className="text-stone-200 text-sm mt-1 font-mono">bmasbarquitectos@hotmail.com</p>
                   <p className="text-stone-400 text-xs mt-1">Recepción de memorias y presupuestos</p>
                 </div>
               </a>

@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'BMASB Arquitectos | Despacho de Arquitectura',
+  title: 'B+B Arquitectos | Despacho de Arquitectura',
   description:
     'Despacho de arquitectura contemporánea enfocado en proyectos residenciales, comerciales e interiores con rigor material y atemporalidad.',
 };
