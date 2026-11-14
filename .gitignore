@@ -27,3 +27,4 @@ node_modules
 
 # Next.js telemetry
 .next/cache
+*.tsbuildinfo
